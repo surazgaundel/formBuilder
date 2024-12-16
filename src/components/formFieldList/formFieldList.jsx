@@ -2,6 +2,7 @@
 import React from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import FieldInput from './fieldInput';
+import ButtonWithDropdown from '../dropDownContext/dropDownContext';
 
 export default function FormFieldList({ formFields, setFormFields,openEditDialog }) {
 
@@ -40,10 +41,12 @@ return (
                     setFormFields={setFormFields}
                     openEditDialog={openEditDialog}
                     />
-                    <button
+                    <ButtonWithDropdown/>
+                    {/* <button
                         size="icon"
                         className="text-center h-min rounded-full"
-                        >+</button> 
+                        // onClick={handleDropDown}
+                        >+</button>  */}
                     </div>
                 )}
                 </Draggable>
